@@ -137,7 +137,7 @@ float Fbm(float2 p, float z, int octaves)
 float DensityAt(float2 scenePos, int octaves)
 {
     float yn = saturate((scenePos.y - inputTop) / max(inputHeight, 1.0f));
-    float hf = saturate(1.0f + gradient * (yn * 2.0f - 1.0f));
+    float hf = saturate(1.0f - 0.5f * abs(gradient) + gradient * (yn - 0.5f));
 
     if (unevenness <= 0.0f)
         return hf;
