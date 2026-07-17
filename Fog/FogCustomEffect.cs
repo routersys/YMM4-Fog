@@ -82,7 +82,7 @@ namespace Fog
             public float BoilSpeed { get => _cb.BoilSpeed; set { _cb.BoilSpeed = value; UpdateConstants(); } }
 
             [CustomEffectProperty(PropertyType.Float, (int)PropertyIndex.Gradient)]
-            public float Gradient { get => _cb.Gradient; set { _cb.Gradient = Math.Clamp(value, -10f, 10f); UpdateConstants(); } }
+            public float Gradient { get => _cb.Gradient; set { _cb.Gradient = Math.Clamp(value, YMM4Constants.VerySmallValue, YMM4Constants.VeryLargeValue); UpdateConstants(); } }
 
             [CustomEffectProperty(PropertyType.Float, (int)PropertyIndex.FogR)]
             public float FogR { get => _cb.FogR; set { _cb.FogR = Math.Clamp(value, 0f, 1f); UpdateConstants(); } }
