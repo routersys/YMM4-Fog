@@ -28,7 +28,7 @@ namespace Fog
 
         [Display(GroupName = nameof(Texts.FogEffectName), Name = nameof(Texts.FogGradient), Description = nameof(Texts.FogGradientDescription), Order = 3, ResourceType = typeof(Texts))]
         [AnimationSlider("F1", "%", -100, 100)]
-        public Animation Gradient { get; } = new Animation(0, -100, 100);
+        public Animation Gradient { get; } = new Animation(0, YMM4Constants.VerySmallValue, YMM4Constants.VeryLargeValue);
 
         [Display(GroupName = nameof(Texts.FogEffectName), Name = nameof(Texts.FogFlowSpeed), Description = nameof(Texts.FogFlowSpeedDescription), Order = 4, ResourceType = typeof(Texts))]
         [AnimationSlider("F1", "%", -200, 200)]
