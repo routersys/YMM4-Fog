@@ -1,10 +1,8 @@
 using YukkuriMovieMaker.Generator;
 
-namespace Fog
-{
-    [AutoGenLocalizer]
-    partial class Texts
-    {
+namespace Fog;
 
-    }
+[AutoGenLocalizer]
+partial class Texts
+{
 }
